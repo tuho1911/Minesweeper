@@ -1,0 +1,9 @@
+F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\bin\Debug\Minesweeper.exe.config
+F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\bin\Debug\Minesweeper.exe
+F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\bin\Debug\Minesweeper.pdb
+F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.AssemblyReference.cache
+F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\obj\Debug\Minesweeper.Properties.Resources.resources
+F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.GenerateResource.cache
+F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.CoreCompileInputs.cache
+F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\obj\Debug\Minesweeper.exe
+F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\obj\Debug\Minesweeper.pdb
