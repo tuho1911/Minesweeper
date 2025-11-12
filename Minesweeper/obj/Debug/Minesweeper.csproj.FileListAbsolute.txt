@@ -7,3 +7,13 @@ F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\obj\Debug\Minesweeper.cs
 F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.CoreCompileInputs.cache
 F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\obj\Debug\Minesweeper.exe
 F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\obj\Debug\Minesweeper.pdb
+D:\Winforms C#\Final_Test\Minesweeper\Minesweeper\bin\Debug\Minesweeper.exe.config
+D:\Winforms C#\Final_Test\Minesweeper\Minesweeper\bin\Debug\Minesweeper.exe
+D:\Winforms C#\Final_Test\Minesweeper\Minesweeper\bin\Debug\Minesweeper.pdb
+D:\Winforms C#\Final_Test\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.AssemblyReference.cache
+D:\Winforms C#\Final_Test\Minesweeper\Minesweeper\obj\Debug\Minesweeper.MainGame.resources
+D:\Winforms C#\Final_Test\Minesweeper\Minesweeper\obj\Debug\Minesweeper.Properties.Resources.resources
+D:\Winforms C#\Final_Test\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.GenerateResource.cache
+D:\Winforms C#\Final_Test\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.CoreCompileInputs.cache
+D:\Winforms C#\Final_Test\Minesweeper\Minesweeper\obj\Debug\Minesweeper.exe
+D:\Winforms C#\Final_Test\Minesweeper\Minesweeper\obj\Debug\Minesweeper.pdb
