@@ -90,6 +90,7 @@
             this.Name = "MainGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Minesweeper";
+            this.Load += new System.EventHandler(this.MainGame_Load);
             this.ResumeLayout(false);
 
         }
