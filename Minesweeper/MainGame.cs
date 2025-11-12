@@ -114,6 +114,15 @@ namespace Minesweeper
             }
         }
 
+        private void btn_LogoRestart_Click(object sender, EventArgs e)
+        {
+            // Mở lại form chọn độ khó
+            ChooseDifficulty chooseForm = new ChooseDifficulty();
+            chooseForm.Show();
+
+            this.Close(); // đóng form game hiện tại
+        }
+
         //sender là đối tượng nào đã phát sinh sự kiện đó, vd nút nào đã được click
         private void Cell_Click(object sender, MouseEventArgs e) // xử lý sự kiện click chuột
         {
@@ -162,6 +171,11 @@ namespace Minesweeper
 
             Reveal(btn.Row, btn.Col);
             CheckWin();
+        }
+        private void Tmr_TimeCount_Tick(object sender, EventArgs e)
+        {
+            elapsedSeconds++;
+            lb_TimeCount.Text = TimeSpan.FromSeconds(elapsedSeconds).ToString(@"mm\:ss");
         }
     }
 }
