@@ -205,6 +205,7 @@ namespace Minesweeper
             }
             btn_LogoRestart.BackgroundImage = Properties.Resources.logo_loser;
             btn_LogoRestart.BackgroundImageLayout = ImageLayout.Stretch;
+            lbl_Notify.Text = "Game Over!!!";
             tmr_TimeCount.Stop();
         }
         private void btn_LogoRestart_Click(object sender, EventArgs e)
@@ -222,6 +223,7 @@ namespace Minesweeper
                 e.Cancel = true;
             }
         }
+
         private void CheckWin()
         {
             foreach (var btn in grid)
@@ -229,8 +231,9 @@ namespace Minesweeper
                 if (!btn.IsMine && !btn.IsRevealed) return; // IsMine false và IsRevealed false, nếu còn ô không phải mìn mà chưa mở thì chưa thắng, vd còn 1 ô IsMine = false  và IsRevealed = false, if (!false && !false) -> if (true && true) -> if (true) -> return
             }
             tmr_TimeCount.Stop();
-            btn_LogoRestart.BackgroundImage = Properties.Resources.logo_win;
+            btn_LogoRestart.BackgroundImage = Properties.Resources.logo_normal;
             btn_LogoRestart.BackgroundImageLayout = ImageLayout.Stretch;
+            lbl_Notify.Text = "You're win!!!";
         }
         private void Tmr_TimeCount_Tick(object sender, EventArgs e)
         {

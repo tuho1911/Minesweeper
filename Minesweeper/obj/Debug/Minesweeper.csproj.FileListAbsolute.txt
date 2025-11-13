@@ -17,3 +17,6 @@ D:\Winforms C#\Final_Test\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.G
 D:\Winforms C#\Final_Test\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.CoreCompileInputs.cache
 D:\Winforms C#\Final_Test\Minesweeper\Minesweeper\obj\Debug\Minesweeper.exe
 D:\Winforms C#\Final_Test\Minesweeper\Minesweeper\obj\Debug\Minesweeper.pdb
+F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\obj\Debug\Minesweeper.exe.config
+F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\obj\Debug\Minesweeper.ChooseDifficulty.resources
+F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\obj\Debug\Minesweeper.MainGame.resources
