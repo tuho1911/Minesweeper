@@ -195,7 +195,18 @@ namespace Minesweeper
                 }
             }
         }
-
+        private void GameOver()
+        {
+            foreach (var btn in grid)
+            {
+                if (btn.IsMine)
+                    btn.BackgroundImage = Properties.Resources.bomb;
+                btn.Enabled = false;
+            }
+            btn_LogoRestart.BackgroundImage = Properties.Resources.logo_loser;
+            btn_LogoRestart.BackgroundImageLayout = ImageLayout.Stretch;
+            tmr_TimeCount.Stop();
+        }
         private void btn_LogoRestart_Click(object sender, EventArgs e)
         {
             // Mở lại form chọn độ khó
@@ -211,7 +222,16 @@ namespace Minesweeper
                 e.Cancel = true;
             }
         }
-        
+        private void CheckWin()
+        {
+            foreach (var btn in grid)
+            {
+                if (!btn.IsMine && !btn.IsRevealed) return; // IsMine false và IsRevealed false, nếu còn ô không phải mìn mà chưa mở thì chưa thắng, vd còn 1 ô IsMine = false  và IsRevealed = false, if (!false && !false) -> if (true && true) -> if (true) -> return
+            }
+            tmr_TimeCount.Stop();
+            btn_LogoRestart.BackgroundImage = Properties.Resources.logo_win;
+            btn_LogoRestart.BackgroundImageLayout = ImageLayout.Stretch;
+        }
         private void Tmr_TimeCount_Tick(object sender, EventArgs e)
         {
             elapsedSeconds++;
