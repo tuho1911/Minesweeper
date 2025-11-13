@@ -114,15 +114,6 @@ namespace Minesweeper
             }
         }
 
-        private void btn_LogoRestart_Click(object sender, EventArgs e)
-        {
-            // Mở lại form chọn độ khó
-            ChooseDifficulty chooseForm = new ChooseDifficulty();
-            chooseForm.Show();
-
-            this.Close(); // đóng form game hiện tại
-        }
-
         //sender là đối tượng nào đã phát sinh sự kiện đó, vd nút nào đã được click
         private void Cell_Click(object sender, MouseEventArgs e) // xử lý sự kiện click chuột
         {
@@ -172,6 +163,55 @@ namespace Minesweeper
             Reveal(btn.Row, btn.Col);
             CheckWin();
         }
+
+        private void Reveal(int x, int y) // mở ô
+        {
+            var btn = grid[x, y]; // lấy button tại vị trí (x,y)
+            if (btn.IsRevealed || btn.IsFlagged) return; // đã mở hoặc đã cắm cờ -> thoát hàm
+        
+            btn.IsRevealed = true; // đánh dấu đã mở
+            btn.BackgroundImage = null;  // bỏ ảnh nền (title)
+            btn.BackColor = Color.LightGray; // nền ô đã mở
+        
+            if (btn.IsMine) // nếu là mìn
+            {
+                btn.BackgroundImage = Properties.Resources.bomb;
+                GameOver(); // kết thúc trò chơi
+                return;
+            }
+        
+            if (btn.AdjacentMines > 0) // nếu có mìn xung quanh
+                CellNumberColor.ApplyStyle(btn);
+            else
+            {
+                CellNumberColor.ApplyStyle(btn);                               //(x - 1, y - 1) (x - 1, y) (x - 1, y + 1)
+                int[] dx = { -1, -1, -1, 0, 0, 1, 1, 1 };                      //  (x, y - 1)     (x, y)     (x, y + 1)
+                int[] dy = { -1, 0, 1, -1, 1, -1, 0, 1 };                      //(x + 1, y - 1) (x + 1, y) (x + 1, y + 1)
+                for (int k = 0; k < 8; k++) // k là 8 hướng xung quanh ô (x,y)
+                {
+                    int ni = x + dx[k], nj = y + dy[k];
+                    if (ni >= 0 && nj >= 0 && ni < rows && nj < cols) // kiểm tra trong phạm vi lưới, là có mấy cái ở góc thì chỉ có 3 hướng thôi, mà nếu ko có điều kiện thì nó sẽ tính 8 hướng và mở 8 hướng, nhưng mảng mình thì không có hướng đó nên nó sẽ báo lỗi.
+                    Reveal(ni, nj); // đệ quy mở các ô xung quanh
+                }
+            }
+        }
+
+        private void btn_LogoRestart_Click(object sender, EventArgs e)
+        {
+            // Mở lại form chọn độ khó
+            var chooseForm = new ChooseDifficulty();
+            chooseForm.Show();
+            this.Close(); // đóng form game hiện tại
+        }
+
+        private void MainGame_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc muốn thoát trò chơi?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+        
         private void Tmr_TimeCount_Tick(object sender, EventArgs e)
         {
             elapsedSeconds++;
