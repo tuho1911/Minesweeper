@@ -40,15 +40,15 @@ namespace Minesweeper
                 cols = 21;
                 mines = 100;
             }
-            MainGame gameForm = new MainGame(rows, cols, mines);
+            this.Hide();
+            var gameForm = new MainGame(rows, cols, mines);
+            gameForm.FormClosed += (s, args) => Application.Exit();
             gameForm.Show();
-
-            this.Hide(); // ẩn form chọn độ khó
         }
 
         private void btn_Exit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
     }
 }
