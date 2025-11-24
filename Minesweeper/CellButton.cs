@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Windows.Forms;//GUI
 
 namespace Minesweeper
 {
-    public class CellButton: Button
+    public class CellButton : Button //From GUI
     {
         public int Row { get; set; } //Vị trí hàng
         public int Col { get; set; } //Vị trí cột

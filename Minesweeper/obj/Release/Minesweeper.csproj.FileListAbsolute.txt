@@ -1,0 +1,12 @@
+F:\GAMES\Games Homemade\Minesweeper\Minesweeper\bin\Release\Minesweeper.exe.config
+F:\GAMES\Games Homemade\Minesweeper\Minesweeper\bin\Release\Minesweeper.exe
+F:\GAMES\Games Homemade\Minesweeper\Minesweeper\bin\Release\Minesweeper.pdb
+F:\GAMES\Games Homemade\Minesweeper\Minesweeper\obj\Release\Minesweeper.csproj.AssemblyReference.cache
+F:\GAMES\Games Homemade\Minesweeper\Minesweeper\obj\Release\Minesweeper.ChooseDifficulty.resources
+F:\GAMES\Games Homemade\Minesweeper\Minesweeper\obj\Release\Minesweeper.MainGame.resources
+F:\GAMES\Games Homemade\Minesweeper\Minesweeper\obj\Release\Minesweeper.Properties.Resources.resources
+F:\GAMES\Games Homemade\Minesweeper\Minesweeper\obj\Release\Minesweeper.csproj.GenerateResource.cache
+F:\GAMES\Games Homemade\Minesweeper\Minesweeper\obj\Release\Minesweeper.csproj.CoreCompileInputs.cache
+F:\GAMES\Games Homemade\Minesweeper\Minesweeper\obj\Release\Minesweeper.exe
+F:\GAMES\Games Homemade\Minesweeper\Minesweeper\obj\Release\Minesweeper.pdb
+F:\GAMES\Games Homemade\Minesweeper\Minesweeper\obj\Release\Minesweeper.exe.config

@@ -103,9 +103,9 @@ namespace Minesweeper.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo_normal {
+        internal static System.Drawing.Bitmap logo_start {
             get {
-                object obj = ResourceManager.GetObject("logo_normal", resourceCulture);
+                object obj = ResourceManager.GetObject("logo_start", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace Minesweeper.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo_start {
+        internal static System.Drawing.Bitmap logo_win {
             get {
-                object obj = ResourceManager.GetObject("logo_start", resourceCulture);
+                object obj = ResourceManager.GetObject("logo_win", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -1,22 +1,24 @@
-F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\bin\Debug\Minesweeper.exe.config
-F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\bin\Debug\Minesweeper.exe
-F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\bin\Debug\Minesweeper.pdb
-F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.AssemblyReference.cache
-F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\obj\Debug\Minesweeper.Properties.Resources.resources
-F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.GenerateResource.cache
-F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.CoreCompileInputs.cache
-F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\obj\Debug\Minesweeper.exe
-F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\obj\Debug\Minesweeper.pdb
-D:\Winforms C#\Final_Test\Minesweeper\Minesweeper\bin\Debug\Minesweeper.exe.config
-D:\Winforms C#\Final_Test\Minesweeper\Minesweeper\bin\Debug\Minesweeper.exe
-D:\Winforms C#\Final_Test\Minesweeper\Minesweeper\bin\Debug\Minesweeper.pdb
-D:\Winforms C#\Final_Test\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.AssemblyReference.cache
-D:\Winforms C#\Final_Test\Minesweeper\Minesweeper\obj\Debug\Minesweeper.MainGame.resources
-D:\Winforms C#\Final_Test\Minesweeper\Minesweeper\obj\Debug\Minesweeper.Properties.Resources.resources
-D:\Winforms C#\Final_Test\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.GenerateResource.cache
-D:\Winforms C#\Final_Test\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.CoreCompileInputs.cache
-D:\Winforms C#\Final_Test\Minesweeper\Minesweeper\obj\Debug\Minesweeper.exe
-D:\Winforms C#\Final_Test\Minesweeper\Minesweeper\obj\Debug\Minesweeper.pdb
-F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\obj\Debug\Minesweeper.exe.config
-F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\obj\Debug\Minesweeper.ChooseDifficulty.resources
-F:\UNIVER\Lap Trinh Windows\Git\Minesweeper\Minesweeper\obj\Debug\Minesweeper.MainGame.resources
+F:\GAMES\Games Homemade\Minesweeper\Minesweeper\bin\Debug\Minesweeper.exe.config
+F:\GAMES\Games Homemade\Minesweeper\Minesweeper\bin\Debug\Minesweeper.exe
+F:\GAMES\Games Homemade\Minesweeper\Minesweeper\bin\Debug\Minesweeper.pdb
+F:\GAMES\Games Homemade\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.AssemblyReference.cache
+F:\GAMES\Games Homemade\Minesweeper\Minesweeper\obj\Debug\Minesweeper.Properties.Resources.resources
+F:\GAMES\Games Homemade\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.GenerateResource.cache
+F:\GAMES\Games Homemade\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.CoreCompileInputs.cache
+F:\GAMES\Games Homemade\Minesweeper\Minesweeper\obj\Debug\Minesweeper.exe
+F:\GAMES\Games Homemade\Minesweeper\Minesweeper\obj\Debug\Minesweeper.pdb
+F:\GAMES\Games Homemade\Minesweeper\Minesweeper\obj\Debug\Minesweeper.exe.config
+F:\GAMES\Games Homemade\Minesweeper\Minesweeper\obj\Debug\Minesweeper.ChooseDifficulty.resources
+F:\GAMES\Games Homemade\Minesweeper\Minesweeper\obj\Debug\Minesweeper.MainGame.resources
+F:\UNIVER\Lap Trinh Windows\Minesweeper\Minesweeper\bin\Debug\Minesweeper.exe.config
+F:\UNIVER\Lap Trinh Windows\Minesweeper\Minesweeper\bin\Debug\Minesweeper.exe
+F:\UNIVER\Lap Trinh Windows\Minesweeper\Minesweeper\bin\Debug\Minesweeper.pdb
+F:\UNIVER\Lap Trinh Windows\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.AssemblyReference.cache
+F:\UNIVER\Lap Trinh Windows\Minesweeper\Minesweeper\obj\Debug\Minesweeper.exe.config
+F:\UNIVER\Lap Trinh Windows\Minesweeper\Minesweeper\obj\Debug\Minesweeper.ChooseDifficulty.resources
+F:\UNIVER\Lap Trinh Windows\Minesweeper\Minesweeper\obj\Debug\Minesweeper.MainGame.resources
+F:\UNIVER\Lap Trinh Windows\Minesweeper\Minesweeper\obj\Debug\Minesweeper.Properties.Resources.resources
+F:\UNIVER\Lap Trinh Windows\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.GenerateResource.cache
+F:\UNIVER\Lap Trinh Windows\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.CoreCompileInputs.cache
+F:\UNIVER\Lap Trinh Windows\Minesweeper\Minesweeper\obj\Debug\Minesweeper.exe
+F:\UNIVER\Lap Trinh Windows\Minesweeper\Minesweeper\obj\Debug\Minesweeper.pdb

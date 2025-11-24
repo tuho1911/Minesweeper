@@ -20,6 +20,7 @@ namespace Minesweeper
         {
             InitializeComponent();
         }
+
         private void btn_Continue_Click(object sender, EventArgs e)
         {
             if (rdb_Easy.Checked)
@@ -40,9 +41,8 @@ namespace Minesweeper
                 cols = 21;
                 mines = 100;
             }
-            this.Hide();
             var gameForm = new MainGame(rows, cols, mines);
-            gameForm.FormClosed += (s, args) => Application.Exit();
+            this.Hide();
             gameForm.Show();
         }
 

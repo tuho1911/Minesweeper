@@ -29,36 +29,34 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btn_LogoRestart = new System.Windows.Forms.Button();
-            this.lb_BombShow = new System.Windows.Forms.Label();
-            this.lb_TimeCount = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lb_WinLose = new System.Windows.Forms.Label();
             this.tmr_TimeCount = new System.Windows.Forms.Timer(this.components);
-            this.lbl_Notify = new System.Windows.Forms.Label();
+            this.lb_TimeCount = new System.Windows.Forms.Label();
+            this.lb_BombShow = new System.Windows.Forms.Label();
+            this.btn_LogoRestart = new System.Windows.Forms.Button();
+            this.lbl_Mess = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btn_LogoRestart
+            // panel1
             // 
-            this.btn_LogoRestart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_LogoRestart.Location = new System.Drawing.Point(36, 140);
-            this.btn_LogoRestart.Name = "btn_LogoRestart";
-            this.btn_LogoRestart.Size = new System.Drawing.Size(50, 49);
-            this.btn_LogoRestart.TabIndex = 8;
-            this.btn_LogoRestart.UseVisualStyleBackColor = false;
-            this.btn_LogoRestart.Click += new System.EventHandler(this.btn_LogoRestart_Click);
+            this.panel1.Location = new System.Drawing.Point(210, 74);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(270, 270);
+            this.panel1.TabIndex = 0;
             // 
-            // lb_BombShow
+            // lb_WinLose
             // 
-            this.lb_BombShow.BackColor = System.Drawing.Color.Black;
-            this.lb_BombShow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lb_BombShow.Font = new System.Drawing.Font("Britannic Bold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_BombShow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lb_BombShow.Location = new System.Drawing.Point(12, 74);
-            this.lb_BombShow.Name = "lb_BombShow";
-            this.lb_BombShow.Size = new System.Drawing.Size(108, 51);
-            this.lb_BombShow.TabIndex = 7;
-            this.lb_BombShow.Text = "Mines";
-            this.lb_BombShow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lb_WinLose.AutoSize = true;
+            this.lb_WinLose.Location = new System.Drawing.Point(403, 666);
+            this.lb_WinLose.Name = "lb_WinLose";
+            this.lb_WinLose.Size = new System.Drawing.Size(0, 20);
+            this.lb_WinLose.TabIndex = 1;
+            // 
+            // tmr_TimeCount
+            // 
+            this.tmr_TimeCount.Enabled = true;
+            this.tmr_TimeCount.Interval = 1000;
             // 
             // lb_TimeCount
             // 
@@ -68,31 +66,41 @@
             this.lb_TimeCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lb_TimeCount.Location = new System.Drawing.Point(12, 9);
             this.lb_TimeCount.Name = "lb_TimeCount";
-            this.lb_TimeCount.Size = new System.Drawing.Size(108, 51);
-            this.lb_TimeCount.TabIndex = 6;
+            this.lb_TimeCount.Size = new System.Drawing.Size(108, 52);
+            this.lb_TimeCount.TabIndex = 2;
             this.lb_TimeCount.Text = "Time: ";
             this.lb_TimeCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel1
+            // lb_BombShow
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkGray;
-            this.panel1.Location = new System.Drawing.Point(210, 74);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(270, 271);
-            this.panel1.TabIndex = 5;
+            this.lb_BombShow.BackColor = System.Drawing.Color.Black;
+            this.lb_BombShow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lb_BombShow.Font = new System.Drawing.Font("Britannic Bold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_BombShow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lb_BombShow.Location = new System.Drawing.Point(12, 74);
+            this.lb_BombShow.Name = "lb_BombShow";
+            this.lb_BombShow.Size = new System.Drawing.Size(108, 52);
+            this.lb_BombShow.TabIndex = 3;
+            this.lb_BombShow.Text = "Mines";
+            this.lb_BombShow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tmr_TimeCount
+            // btn_LogoRestart
             // 
-            this.tmr_TimeCount.Enabled = true;
-            this.tmr_TimeCount.Interval = 1000;
+            this.btn_LogoRestart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LogoRestart.Location = new System.Drawing.Point(36, 140);
+            this.btn_LogoRestart.Name = "btn_LogoRestart";
+            this.btn_LogoRestart.Size = new System.Drawing.Size(50, 50);
+            this.btn_LogoRestart.TabIndex = 4;
+            this.btn_LogoRestart.UseVisualStyleBackColor = false;
+            this.btn_LogoRestart.Click += new System.EventHandler(this.btn_LogoRestart_Click);
             // 
-            // lbl_Notify
+            // lbl_Mess
             // 
-            this.lbl_Notify.AutoSize = true;
-            this.lbl_Notify.Location = new System.Drawing.Point(12, 212);
-            this.lbl_Notify.Name = "lbl_Notify";
-            this.lbl_Notify.Size = new System.Drawing.Size(0, 20);
-            this.lbl_Notify.TabIndex = 10;
+            this.lbl_Mess.AutoSize = true;
+            this.lbl_Mess.Location = new System.Drawing.Point(12, 209);
+            this.lbl_Mess.Name = "lbl_Mess";
+            this.lbl_Mess.Size = new System.Drawing.Size(0, 20);
+            this.lbl_Mess.TabIndex = 5;
             // 
             // MainGame
             // 
@@ -100,15 +108,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(1014, 758);
-            this.Controls.Add(this.lbl_Notify);
+            this.Controls.Add(this.lbl_Mess);
             this.Controls.Add(this.btn_LogoRestart);
             this.Controls.Add(this.lb_BombShow);
             this.Controls.Add(this.lb_TimeCount);
+            this.Controls.Add(this.lb_WinLose);
             this.Controls.Add(this.panel1);
             this.Name = "MainGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Minesweeper";
-            this.Load += new System.EventHandler(this.MainGame_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainGame_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainGame_FormClosed);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,12 +127,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_LogoRestart;
-        private System.Windows.Forms.Label lb_BombShow;
-        private System.Windows.Forms.Label lb_TimeCount;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lb_WinLose;
         private System.Windows.Forms.Timer tmr_TimeCount;
-        private System.Windows.Forms.Label lbl_Notify;
+        private System.Windows.Forms.Label lb_TimeCount;
+        private System.Windows.Forms.Label lb_BombShow;
+        private System.Windows.Forms.Button btn_LogoRestart;
+        private System.Windows.Forms.Label lbl_Mess;
     }
 }
 

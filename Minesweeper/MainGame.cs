@@ -12,11 +12,13 @@ namespace Minesweeper
 {
     public partial class MainGame : Form
     {
-        private int rows, cols, mines;
+        private int rows , cols , mines ; 
         private CellButton[,] grid; // Mảng 2 chiều, kiểu CellButton, chưa có dữ liệu, tên grid
         private readonly Random rand = new Random(); // Tạo số ngẫu nhiên
         private int elapsedSeconds = 0;
         private bool firstClick = true; // Biến kiểm tra lần click đầu tiên
+        private bool isRestarted = false;
+
         public MainGame(int rows, int cols, int mines)
         {
             InitializeComponent();
@@ -29,10 +31,11 @@ namespace Minesweeper
             StartGame();
         }
 
-        private void MainGame_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e) 
         {
+            
             tmr_TimeCount.Tick += Tmr_TimeCount_Tick;
-        }// nay la form1_load trong code goc
+        }
 
         private void StartGame()
         {
@@ -59,7 +62,7 @@ namespace Minesweeper
                     btn.Col = j; // gán vị trí cột
                     btn.Width = size; // chiều rộng
                     btn.Height = size; // chiều cao
-                    btn.Left = j * size;
+                    btn.Left = j * size; 
                     btn.Top = i * size;
                     btn.FlatAppearance.BorderSize = 0; // bỏ viền
                     btn.FlatStyle = FlatStyle.Flat; // kiểu nút phẳng
@@ -89,7 +92,15 @@ namespace Minesweeper
                 }
             }
 
-
+            //Test 
+            //for (int i = 0; i < rows; i++)
+            //{
+            //    for (int j = 0; j < cols; j++)
+            //    {
+            //        Console.Write(grid[i, j].IsMine ? "💣 " : "0 "); // hoặc '1' thay cho mìn
+            //    }
+            //    Console.WriteLine();
+            //}
         }
 
         private void CalculateAdjacents() //tính số mìn xung quanh
@@ -124,13 +135,13 @@ namespace Minesweeper
             if (e.Button == MouseButtons.Right) // cắm cờ, chuột phải
             {
                 btn.IsFlagged = !btn.IsFlagged; // đảo trạng thái, lúc đầu false -> true, true -> false
-                                                //btn.Text = btn.IsFlagged ? "\U0001F6A9" : ""; // điều kiện ? đúng : sai, mã hex của icon cái cờ
+                //btn.Text = btn.IsFlagged ? "\U0001F6A9" : ""; // điều kiện ? đúng : sai, mã hex của icon cái cờ
                 btn.BackgroundImage = btn.IsFlagged ? Properties.Resources.flag : Properties.Resources.title;
                 btn.BackgroundImageLayout = ImageLayout.Stretch;
 
                 if (btn.IsFlagged) // nếu đang cắm cờ, trừ số mìn đi 1, ở trên đã đảo trạng thái rồi nên nếu bây giờ là true thì tức là đang cắm cờ
                     lb_BombShow.Text = (int.Parse(lb_BombShow.Text) - 1).ToString();
-                else
+                else 
                     lb_BombShow.Text = (int.Parse(lb_BombShow.Text) + 1).ToString();
                 return; // thoát hàm
             }
@@ -168,18 +179,18 @@ namespace Minesweeper
         {
             var btn = grid[x, y]; // lấy button tại vị trí (x,y)
             if (btn.IsRevealed || btn.IsFlagged) return; // đã mở hoặc đã cắm cờ -> thoát hàm
-        
+
             btn.IsRevealed = true; // đánh dấu đã mở
             btn.BackgroundImage = null;  // bỏ ảnh nền (title)
             btn.BackColor = Color.LightGray; // nền ô đã mở
-        
+
             if (btn.IsMine) // nếu là mìn
             {
                 btn.BackgroundImage = Properties.Resources.bomb;
                 GameOver(); // kết thúc trò chơi
                 return;
             }
-        
+
             if (btn.AdjacentMines > 0) // nếu có mìn xung quanh
                 CellNumberColor.ApplyStyle(btn);
             else
@@ -195,6 +206,7 @@ namespace Minesweeper
                 }
             }
         }
+
         private void GameOver()
         {
             foreach (var btn in grid)
@@ -205,11 +217,13 @@ namespace Minesweeper
             }
             btn_LogoRestart.BackgroundImage = Properties.Resources.logo_loser;
             btn_LogoRestart.BackgroundImageLayout = ImageLayout.Stretch;
-            lbl_Notify.Text = "Game Over!!!";
+            lbl_Mess.Text = "Game over!!!";
             tmr_TimeCount.Stop();
         }
+
         private void btn_LogoRestart_Click(object sender, EventArgs e)
         {
+            isRestarted = true;
             // Mở lại form chọn độ khó
             var chooseForm = new ChooseDifficulty();
             chooseForm.Show();
@@ -218,9 +232,26 @@ namespace Minesweeper
 
         private void MainGame_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn có chắc muốn thoát trò chơi?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            if (!isRestarted)
             {
-                e.Cancel = true;
+                if (e.CloseReason == CloseReason.UserClosing)
+                {
+                    DialogResult result = MessageBox.Show("Bạn có chắc muốn thoát trò chơi?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.No)
+                    {
+                        e.Cancel = true; // Hủy việc đóng form
+                    }
+                    // Nếu Yes thì không làm gì cả, để form tự đóng (code sẽ chạy xuống FormClosed)
+                }
+            }
+        }
+
+        private void MainGame_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (!isRestarted)
+            {
+                Application.Exit(); // Đóng hoàn toàn ứng dụng (bao gồm form ẩn)
             }
         }
 
@@ -231,14 +262,16 @@ namespace Minesweeper
                 if (!btn.IsMine && !btn.IsRevealed) return; // IsMine false và IsRevealed false, nếu còn ô không phải mìn mà chưa mở thì chưa thắng, vd còn 1 ô IsMine = false  và IsRevealed = false, if (!false && !false) -> if (true && true) -> if (true) -> return
             }
             tmr_TimeCount.Stop();
-            btn_LogoRestart.BackgroundImage = Properties.Resources.logo_normal;
+            btn_LogoRestart.BackgroundImage = Properties.Resources.logo_win;
             btn_LogoRestart.BackgroundImageLayout = ImageLayout.Stretch;
-            lbl_Notify.Text = "You're win!!!";
+            lbl_Mess.Text = "Congratulation!!!";
         }
-        private void Tmr_TimeCount_Tick(object sender, EventArgs e)
+
+
+        private void Tmr_TimeCount_Tick(object sender, EventArgs e) 
         {
-            elapsedSeconds++;
-            lb_TimeCount.Text = TimeSpan.FromSeconds(elapsedSeconds).ToString(@"mm\:ss");
+            elapsedSeconds++; 
+            lb_TimeCount.Text = TimeSpan.FromSeconds(elapsedSeconds).ToString(@"mm\:ss"); 
         }
     }
 }
